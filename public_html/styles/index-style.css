@@ -1,0 +1,20 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 31 Mar 2022, 11:20:21
+    Author     : meabh
+*/
+
+:root {
+    --green-1: #EBF2DC;
+    --green-2: #B7D9A7;
+    --green-3: #80A689;
+    --green-4: #4F8C58;
+    --brown-1: #BFA79F;
+}
+
+body{
+    background-color: var(--green-1);
+}
