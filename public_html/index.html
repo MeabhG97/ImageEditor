@@ -11,6 +11,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <link href="styles/index-style.css" rel="stylesheet" type="text/css"/>
         <script src="scripts/RenderCanvas.js" type="module"></script>
         <script src="scripts/submitImage.js" type="module"></script>
+        <script src="scripts/layerSelector.js" type="module"></script>
     </head>
     <body>
         <div id="container">
@@ -28,9 +29,23 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                            multiple/>
                 </form>
                 
-                <canvas id="canvas">
-                    Your browser does not support the canvas tag.
-                </canvas>
+                <div id="layerSelctor">
+                    Layers
+                    <ul id="layerList">
+                        
+                    </ul>
+                </div>
+                
+                <div id="canvasContainer">
+                    <canvas id="canvas">
+                        Your browser does not support the canvas tag.
+                    </canvas>
+                    <div id="canvasImageContainer">
+                        <img id="canvasImage"/>
+                    </div>
+                </div>
+                
+                
             </main>
             
             <footer>
