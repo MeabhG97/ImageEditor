@@ -33,3 +33,12 @@ body{
     width: 960px;
     height: 540px;
 }
+
+#layerList{
+    height: 100px;
+    overflow-y: auto;
+}
+
+.layer{
+    list-style: none;
+}

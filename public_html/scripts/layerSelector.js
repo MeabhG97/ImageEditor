@@ -30,6 +30,7 @@ function layerMenu(){
 
 function layerSwap(event){
     if(offScreenCanvases.length > 1){
+        //Binding the innerHTML returned an event rather than the HTML
         const numberFilter = /\d/g;
         let layerNumbers = event.path[0].innerHTML.match(numberFilter);
 
