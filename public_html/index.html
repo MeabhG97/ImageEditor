@@ -5,24 +5,38 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Image Editor</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="styles/index-style.css" rel="stylesheet" type="text/css"/>
+        <script src="scripts/filters.js" ></script>
+        <script src="scripts/filters2.js" ></script>
     </head>
     <body>
+        
         <div id="container">
             <header>
-                
+               
             </header>
             
             <nav>
-                
+               <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span> 
+               <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="imageForm">Add Files</a>
+  <a href="#">Add image</a>
+  <button class ="button1" onclick="applyFilter()">Filters</button>
+  <a href="#"></a>
+</div>
             </nav>
             
-            <main>
+            <main id="display">
+
+            
+                
                 <canvas id="canvas">
-                    
+                    <canvas id="screenCanvas">
+                </canvas>
                 </canvas>
             </main>
             
