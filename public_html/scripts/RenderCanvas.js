@@ -50,16 +50,13 @@ window.onload = () => {
 };
 
 function renderCanvas(){
-    console.log(canvasNames);
     layerMenu();
     offScreenCanvases.forEach(offSC => {
         ctx.drawImage(offSC, 0, 0);
     });
-    console.log(canvasNames);
 }
 
 function canvasToImage(){
-    console.log('called');
     let dataURL = canvas.toDataURL();
     document.getElementById('canvasImage').src = dataURL;
 }
