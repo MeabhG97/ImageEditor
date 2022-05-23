@@ -5,6 +5,7 @@
 
 import {offScreenCanvases} from './RenderCanvas.js';
 import {canvasNames} from './RenderCanvas.js';
+import {images} from './RenderCanvas.js';
 import {renderCanvas} from './RenderCanvas.js';
 
 export {layerMenu};
@@ -46,12 +47,18 @@ function layerSwap(event){
         
         let canvas = offScreenCanvases[index];
         let name = canvasNames[index];
+        let image = images[index];
         
         offScreenCanvases.splice(index, 1);
         canvasNames.splice(index, 1);
+        images.splice(index, 1);
+        
+        document.getElementById('rotateSlider').value = image.drawRotation;
         
         offScreenCanvases.push(canvas);
         canvasNames.push(name);
+        images.push(image);
+        
     }
     renderCanvas();
 }
