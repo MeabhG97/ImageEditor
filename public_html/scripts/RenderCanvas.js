@@ -11,6 +11,13 @@ import {mouseMoveHandler} from './imageTransFormations.js';
 import {rotateImage} from './imageTransFormations.js';
 import {scaleImage} from './imageTransFormations.js';
 
+import {applySepia} from './Sepia.js';
+import {applyBrightness} from './Brightness.js';
+import {applyGreyscale} from './Greyscale.js';
+import {applyInvert} from './Invert.js';
+import {applyPosterise} from './Posterise.js';
+import {applyThreshold} from './Threshold.js';
+
 export {renderCanvas, offScreenCanvases, canvasNames, images,
     CANVAS_WIDTH, CANVAS_HEIGHT, penSelected, penColor, penSize, canvasBounds};
 
@@ -40,6 +47,13 @@ window.onload = () => {
     document.getElementById('penSelect').addEventListener('click', penSelect);
     document.getElementById('penColor').addEventListener('change', penColorSelect);
     document.getElementById('penSize').addEventListener('change', penSizeSelect);
+    
+    document.getElementById('sepia').addEventListener('click', applySepia);
+    document.getElementById('brightness').addEventListener('click', applyBrightness);
+    document.getElementById('greyscale').addEventListener('click', applyGreyscale);
+    document.getElementById('invert').addEventListener('click', applyInvert);
+    document.getElementById('posterise').addEventListener('click', applyPosterise);
+    document.getElementById('threshold').addEventListener('click', applyThreshold);
 
     //Canvas Setup
     canvas = document.getElementById('canvas');
