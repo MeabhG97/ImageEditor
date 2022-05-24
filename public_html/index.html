@@ -5,39 +5,73 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 -->
 <html>
     <head>
-        <title>Image Editor</title>
+        <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="styles/index-style.css" rel="stylesheet" type="text/css"/>
-        <script src="scripts/filters.js" ></script>
-        <script src="scripts/filters2.js" ></script>
+        <script src="scripts/RenderCanvas.js" type="module"></script>
+        <script src="scripts/Comp1.js" type="module"></script>
+        <script src="scripts/GlobalComp.js" type="module"></script>
+        <script src="scripts/Threshold.js" type="module"></script>
+        <script src="scripts/Posterise.js" type="module"></script>
+        <script src="scripts/Invert.js" type="module"></script>
+        <script src="scripts/Greyscale.js" type="module"></script>
+        <script src="scripts/Brightness.js" type="module"></script>
+        <script src="scripts/Sepia.js" type="module" ></script>
+        <script src="scripts/sideNav.js" type="text/javascript"></script>
+        <script src="scripts/submitImage.js" type="module"></script>
+        <script src="scripts/layerSelector.js" type="module"></script>
     </head>
     <body>
-        
         <div id="container">
             <header>
-               
+                
             </header>
             
             <nav>
+                
+            </nav>
+            
+            <main>
+                <form id="imageForm">
+                    <input type="file" id="inputImage" accept="image/*" 
+                           multiple/>
+                </form>
+                 <nav>
                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span> 
                <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="imageForm">Add Files</a>
   <a href="#">Add image</a>
-  <button class ="button1" onclick="applyFilter()">Filters</button>
+  <button id ="sepia">Filters</button>
+  <button id ="brightness">Sepia</button>
+   <button id ="greyscale">Greyscale</button>
+   <button id ="invert">Invert</button>
+   <button id ="posterise">Posterise</button>
+   <button id ="threshold">Threshold</button>
+   <button id ="global">Global</button>
+   <button id ="comp">Comp1</button>
+   
+  
   <a href="#"></a>
 </div>
             </nav>
-            
-            <main id="display">
-
-            
+                <div id="layerSelctor">
+                    Layers
+                    <ul id="layerList">
+                        
+                    </ul>
+                </div>
                 
-                <canvas id="canvas">
-                    <canvas id="screenCanvas">
-                </canvas>
-                </canvas>
+                <div id="canvasContainer">
+                    <canvas id="canvas">
+                        Your browser does not support the canvas tag.
+                    </canvas>
+                    <div id="canvasImageContainer">
+                        <img id="canvasImage"/>
+                    </div>
+                </div>
+                
             </main>
             
             <footer>
@@ -46,3 +80,4 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         </div>
     </body>
 </html>
+
